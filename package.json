@@ -33,7 +33,8 @@
   ],
   "dependencies": {
     "fuzzaldrin": "^2.1.0",
-    "space-pen-plus": "^6.0.3"
+    "space-pen-plus": "^6.0.3",
+    "fs-extra": "^9.0.1"
   },
   "devDependencies": {
     "rollup": "^2.11.2",
