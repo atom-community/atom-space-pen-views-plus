@@ -1,7 +1,7 @@
 {
-  "name": "atom-space-pen-views",
-  "version": "2.2.0",
-  "description": "Atom SpacePen views that used to live in core.",
+  "name": "atom-space-pen-views-plus",
+  "version": "3.0.0",
+  "description": "Modern Atom SpacePen views that used to live in core.",
   "main": "./lib/main",
   "es": "./lib/main.es.js",
   "files": [
@@ -20,15 +20,15 @@
   "atomTestRunner": "./runner",
   "repository": {
     "type": "git",
-    "url": "https://github.com/atom/atom-space-pen-views.git"
+    "url": "https://github.com/aminya/atom-space-pen-views.git"
   },
   "bugs": {
-    "url": "https://github.com/atom/atom-space-pen-views/issues"
+    "url": "https://github.com/aminya/atom-space-pen-views/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "http://github.com/atom/atom-space-pen-views/raw/master/LICENSE.md"
+      "url": "http://github.com/aminya/atom-space-pen-views/raw/master/LICENSE.md"
     }
   ],
   "dependencies": {
