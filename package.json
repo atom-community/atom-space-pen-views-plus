@@ -1,6 +1,6 @@
 {
   "name": "atom-space-pen-views-plus",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Modern Atom SpacePen views that used to live in core.",
   "main": "./lib/main",
   "es": "./lib/main.es.js",
