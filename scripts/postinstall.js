@@ -6,7 +6,7 @@
 var fs = require('fs-extra')
 
 function copyStyleSheet () {
-  fs.copySync(__dirname + '/../stylesheets', __dirname + '../../../../stylesheets')
+  fs.copySync(__dirname + '/../stylesheets', __dirname + '/../../../stylesheets')
 }
 
 copyStyleSheet()
