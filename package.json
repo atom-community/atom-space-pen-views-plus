@@ -1,42 +1,52 @@
 {
-  "name": "atom-space-pen-views",
-  "version": "2.2.0",
-  "description": "Atom SpacePen views that used to live in core.",
+  "name": "atom-space-pen-views-plus",
+  "version": "3.0.4",
+  "description": "Modern Atom SpacePen views that used to live in core.",
   "main": "./lib/main",
+  "es": "./lib/main.es.js",
+  "files": [
+    "lib/**",
+    "src/**",
+    "stylesheets/**",
+    "scripts/**"
+  ],
   "scripts": {
     "test": "atom --test spec",
-    "prepublish": "grunt clean lint coffee"
+    "dev-test": "npm run clean && env NODE_ENV=development rollup -c && atom --test spec",
+    "clean": "shx rm -rf lib spec/*.js spec/*.js.map",
+    "dev": "npm run clean && env NODE_ENV=development rollup -c -w",
+    "build": "npm run clean && env NODE_ENV=production rollup -c",
+    "prepare": "npm run build"
   },
   "atomTestRunner": "./runner",
   "repository": {
     "type": "git",
-    "url": "https://github.com/atom/atom-space-pen-views.git"
+    "url": "https://github.com/aminya/atom-space-pen-views.git"
   },
   "bugs": {
-    "url": "https://github.com/atom/atom-space-pen-views/issues"
+    "url": "https://github.com/aminya/atom-space-pen-views/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "http://github.com/atom/atom-space-pen-views/raw/master/LICENSE.md"
+      "url": "http://github.com/aminya/atom-space-pen-views/raw/master/LICENSE.md"
     }
   ],
   "dependencies": {
     "fuzzaldrin": "^2.1.0",
-    "space-pen-plus": "^6.0.3"
+    "space-pen-plus": "^6.0.3",
+    "fs-extra": "^9.0.1"
   },
   "devDependencies": {
+    "rollup": "^2.11.2",
+    "@rollup/plugin-node-resolve": "^8.0.0",
+    "@rollup/plugin-commonjs": "^12.0.0",
+    "rollup-plugin-terser": "^6.1.0",
+    "rollup-plugin-coffee-script": "^2.0.0",
+    "shx": "^0.3.2",
     "atom-jasmine3-test-runner": "^4.4.7",
     "jasmine": "^3.5.0",
     "@types/jasmine": "^3.5.10",
-    "coffee-cache": "^1.0.2",
-    "coffeescript": "^1.12.7",
-    "grunt": "^1.1.0",
-    "grunt-cli": "^1.3.2",
-    "grunt-coffeelint": "^0.0.16",
-    "grunt-contrib-coffee": "1.0.0",
-    "jasmine-focused": "^1.0.7",
-    "rimraf": "^3.0.2",
-    "temp": "^0.9.1"
+    "coffeescript": "^1.12.7"
   }
 }
